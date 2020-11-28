@@ -1,4 +1,4 @@
-let num = 2;
+let num = 4;
 let MAX = 10;
 let lastParticipate;
 let lastResult;
