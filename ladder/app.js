@@ -76,6 +76,7 @@ function drawResult(){
 }
 
 function storedata(e){
+  e.preventDefault();
   sessionStorage.number = num;
   var person = [];
   var results = [];
@@ -87,4 +88,5 @@ function storedata(e){
     person: person,
     results: results,
   });
+  location.href='result.html';
 }
