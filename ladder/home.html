@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>사다리 타기</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>사다리 타기</h1>
+      <form id="homeform" action="result.html" method="post">
+        <div class="numberinput">
+          <p>몇 명인가요?</p>
+          <a id="minus"><strong>-</strong></a>
+          <input type="number" name="num" value="2" readonly>
+          <a id="plus"><strong>+</strong></a>
+        </div>
+        <div class="textinput">
+          <div class="participate">
+            <p>참가자 목록</p>
+          </div>
+          <div class="result">
+            <p>결과 목록</p>
+          </div>
+        </div>
+        <button type="submit" name="button">시작!</button>
+      </form>
+    </div>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
