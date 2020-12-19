@@ -8,7 +8,15 @@
 </head>
 
 <body>
-    <button id="button-alarm">알림</button>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <button id="button-alarm">설정</button>
+
     <div class="wrapper">
         <h1>스톱 워치</h1>
         <p>
@@ -19,7 +27,7 @@
         <button id="button-stop">멈춤</button>
         <button id="button-reset">초기화</button>
     </div>
-    
+
     <ul id="laps">
     </ul>
     <script src="script.js" charset="utf-8"></script>

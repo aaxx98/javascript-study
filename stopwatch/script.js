@@ -17,10 +17,15 @@ var Interval;
 
 getLaps();
 
+
+buttonAlarm.onclick = function(){
+    openNav();
+}
+/*
 buttonAlarm.onclick = function () {
     var audio = new Audio("Small Bell Jingle.mp3");
     audio.play();
-}
+}*/
 
 buttonStart.onclick = function () { //시작 버튼 클릭시
     clearInterval(Interval);
@@ -127,7 +132,7 @@ function storeLaps() {
 }
 
 function getLaps() {
-    if(windows.localStorage.myLaps){
+    if(window.localStorage.myLaps){
         lapList.innerHTML = window.localStorage.myLaps;
     }
     if (window.localStorage.time != null) {
@@ -143,3 +148,11 @@ function getLaps() {
         appendHours.innerHTML = data.innerhours;
     }
 }
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
