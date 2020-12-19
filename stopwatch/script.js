@@ -127,7 +127,9 @@ function storeLaps() {
 }
 
 function getLaps() {
-    lapList.innerHTML = window.localStorage.myLaps;
+    if(windows.localStorage.myLaps){
+        lapList.innerHTML = window.localStorage.myLaps;
+    }
     if (window.localStorage.time != null) {
         var data = JSON.parse(window.localStorage.time);
         tens = data.tens;
