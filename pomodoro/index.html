@@ -8,6 +8,21 @@
 </head>
 
 <body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="setting">타이머 설정</div>
+        <div id="timer-setting">
+            <input type="number" id="timer-hour" min="0" value="0">
+            <label>시간</label>
+            <input type="number" id="timer-minute" min="0" max="59" value="0">
+            <label>분</label>
+            <input type="number" id="timer-second" min="0" max="59" value="0">
+            <label>초</label>
+            <button id="button-alarm">+</button>
+        </div>
+    </div>
+    <button id="button-setting">설정</button>
+
     <div class="wrapper">
         <h1>스톱 워치</h1>
         <p>
@@ -19,6 +34,7 @@
         <button id="button-stop">멈춤</button>
         <button id="button-reset">초기화</button>
     </div>
+
     <ul id="laps">
     </ul>
     <script src="script.js" charset="utf-8"></script>

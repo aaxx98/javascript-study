@@ -10,11 +10,22 @@ var buttonStart = document.getElementById("button-start");
 var buttonLap = document.getElementById("button-lap");
 var buttonStop = document.getElementById("button-stop");
 var buttonReset = document.getElementById("button-reset");
+var buttonAlarm = document.getElementById("button-alarm");
+var buttonSetting = document.getElementById("button-setting");
 var lapList = document.getElementById('laps');
 var lapCounter = 1;
 var Interval;
 
 getLaps();
+
+buttonSetting.onclick = function () {
+    openNav();
+}
+
+buttonAlarm.onclick = function () {
+    var audio = new Audio("Small Bell Jingle.mp3");
+    audio.play();
+}
 
 buttonStart.onclick = function () { //시작 버튼 클릭시
     clearInterval(Interval);
@@ -136,4 +147,12 @@ function getLaps() {
         appendMinutes.innerHTML = data.innerminutes;
         appendHours.innerHTML = data.innerhours;
     }
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "450px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }
